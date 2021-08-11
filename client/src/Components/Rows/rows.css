@@ -1,0 +1,67 @@
+.rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.rows-card-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 2%;
+}
+
+.rows-title {
+  font-size: 1.6rem;
+  color: rgb(83, 83, 83);
+  margin: 1% 2%;
+}
+
+.view-link-wrapper {
+  margin: 0.5% 2%;
+  width: 8%;
+}
+.view-link {
+  width: 100%;
+  padding: 0.25rem;
+  border-radius: 10px;
+  background: #870000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #190a05,
+    #870000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #190a05,
+    #870000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: whitesmoke;
+  border: 1px solid rgb(83, 83, 83);
+  text-align: center;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  transition: 0.35s ease-out;
+}
+
+.view-link:hover {
+  transform: scale(1.15);
+}
+
+/* @media only screen and (max-width: 1340px) {
+  .rows-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+@media only screen and (max-width: 1102px) {
+  .rows-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .view-link-wrapper {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .rows-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

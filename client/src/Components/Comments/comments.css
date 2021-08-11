@@ -1,0 +1,142 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.comment {
+  background: whitesmoke;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+.comments-header {
+  margin: 2%;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  border-bottom: 1px solid darkgrey;
+}
+
+.comment-author-name {
+  width: 100%;
+  color: black;
+  margin-left: 15px;
+}
+
+.comment-text {
+  overflow: hidden;
+  color: black;
+  font-size: 0.8rem;
+  padding: 3%;
+  border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* Comment Form */
+
+.comment-form {
+  position: relative;
+  width: 100%;
+}
+
+.comment-form-header {
+  display: flex;
+  align-items: center;
+}
+.comment-form-header > h3 {
+  margin-right: 1rem;
+}
+
+.comment-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 2.5em;
+  background: #870000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #190a05,
+    #870000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #190a05,
+    #870000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 1px solid white;
+  border-radius: 999px;
+  color: whitesmoke;
+}
+
+.comment-input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1% 0;
+}
+
+.comment-input-wrapper {
+  flex: 1;
+  display: flex;
+}
+
+.comment-input-wrapper > input {
+  padding: 2%;
+  width: 96%;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 1%;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+}
+
+.comment-button-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.comment-cancel {
+  width: 100%;
+  border-radius: 5px;
+  color: grey;
+  cursor: pointer;
+  border: 1px solid darkgrey;
+  transition: 0.75s ease-out;
+}
+.comment-submit {
+  width: 100%;
+  margin-left: 4%;
+  border-radius: 5px;
+  background: #870000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #190a05,
+    #870000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #190a05,
+    #870000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.5s ease-out;
+}
+.comment-submit:hover,
+.comment-cancel:hover {
+  transform: scale(1.05);
+}

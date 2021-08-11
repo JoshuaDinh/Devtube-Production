@@ -1,0 +1,89 @@
+.searchbar {
+  position: relative;
+  min-height: 10vh;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  border: 1px solid rgb(233, 230, 230);
+}
+
+.searchbar-form {
+  width: 100%;
+  height: 100%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+.searchbar-input-container {
+  width: 71%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  background: rgb(226, 226, 226, 0.7);
+}
+
+.searchbar-input {
+  width: 95%;
+  padding: 1.5%;
+  outline: none;
+  border: none;
+  border-right: 1px solid grey;
+  background-color: transparent;
+}
+
+.searchbar-search-icon {
+  font-size: 1.7rem !important;
+  cursor: pointer;
+  text-decoration: none;
+  color: grey;
+}
+
+.searchbar-avatar-icon {
+  cursor: pointer;
+  margin-right: 2%;
+}
+
+.searchbar-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: rgb(124, 124, 124);
+  border: 1px solid #ff073a;
+  border-radius: 25px;
+}
+
+.searchbar-mobile-nav-icon {
+  margin-right: 20px;
+  font-size: 2rem !important;
+  color: grey;
+  cursor: pointer;
+  z-index: -1;
+}
+.searchbar-mobile-nav-close {
+  transform: rotate(180deg);
+}
+
+.searchbar-mobile-nav-icon:hover {
+  color: red;
+}
+
+@media only screen and (max-width: 1340px) {
+  .searchbar-mobile-nav-icon {
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 800px) 
+{
+  .searchbar-input-container{ width:100%;}
+}
+
