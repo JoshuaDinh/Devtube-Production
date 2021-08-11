@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
   border-radius: 10px;
+ 
   overflow: hidden;
   background: whitesmoke;
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
@@ -32,22 +32,3 @@
   object-fit: fill;
 }
 
-/* .play-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: red;
-  height: 20%;
-  width: 25%;
-  color: white;
-  border-radius: 10px;
-  opacity: 0;
-}
-
-.play-icon {
-  font-size: 2rem !important;
-} */
