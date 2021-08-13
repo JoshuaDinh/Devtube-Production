@@ -82,8 +82,12 @@
   }
 }
 
-@media only screen and (max-width: 800px) 
-{
-  .searchbar-input-container{ width:100%;}
+@media only screen and (max-width: 800px) {
+  .searchbar-input-container {
+    width: 100%;
+    height: 65%;
+  }
+  .searchbar {
+    height: 5vh;
+  }
 }
-
