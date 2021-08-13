@@ -6,7 +6,7 @@ const Comment = ({ author, profileImage, text }) => {
     <div className="comment">
       <div className="comment-author">
         <div className="comment-avatar">
-          <h2>{profileImage}</h2>
+          <span>{profileImage}</span>
         </div>
         <h5 className=" comment-author-name">{author}</h5>
       </div>

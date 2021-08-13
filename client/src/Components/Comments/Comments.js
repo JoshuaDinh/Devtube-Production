@@ -28,15 +28,18 @@ export const Comments = ({ videoId }) => {
       />
 
       <h3 className="comments-header">Comments: {comments.length}</h3>
-      {comments?.map((comment) => {
-        return (
-          <Comment
-            author={comment.authorDisplayName}
-            profileImage={comment.authorProfileImageUrl}
-            text={comment.comment}
-          />
-        );
-      })}
+      <div className="comments-container">
+        {" "}
+        {comments?.map((comment) => {
+          return (
+            <Comment
+              author={comment.authorDisplayName}
+              profileImage={comment.authorProfileImageUrl}
+              text={comment.comment}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
