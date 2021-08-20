@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./videoDetails.css";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ThumbDownIcon from "@material-ui/icons/ThumbDown";
@@ -16,6 +16,12 @@ const VideoDetails = ({
 }) => {
   const [likeStatus, setLikeStatus] = useState(true);
   const [dislikeStatus, setDislikeStatus] = useState(true);
+
+  // Resets status when new videos are selected
+  useEffect(() => {
+    setLikeStatus(true);
+    setDislikeStatus(true);
+  }, [videoId]);
 
   // Determines if like button has been pressed - allowing only one vote per person/render
   const handleLikes = async () => {
@@ -35,7 +41,6 @@ const VideoDetails = ({
   };
 
   // Determines if dislike button has been pressed - allowing only one vote per person/render
-
   const handleDislikes = async () => {
     setDislikeStatus(!likeStatus);
     if (dislikeStatus === true) {
