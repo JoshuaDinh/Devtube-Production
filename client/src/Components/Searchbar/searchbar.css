@@ -1,7 +1,7 @@
 .searchbar {
   position: relative;
   min-height: 10vh;
-  background: white;
+  background: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,16 +16,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: none;
 }
 
 .searchbar-input-container {
   width: 71%;
+  padding: 2px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
-  background: rgb(226, 226, 226, 0.7);
+  border: 1px solid #535353;
+  background: whitesmoke;
 }
 
 .searchbar-input {
@@ -33,7 +34,6 @@
   padding: 1.5%;
   outline: none;
   border: none;
-  border-right: 1px solid grey;
   background-color: transparent;
 }
 
@@ -41,7 +41,7 @@
   font-size: 1.7rem !important;
   cursor: pointer;
   text-decoration: none;
-  color: grey;
+  color: #535353;
 }
 
 .searchbar-avatar-icon {
@@ -56,7 +56,7 @@
   cursor: pointer;
   text-decoration: none;
   padding: 0.5rem;
-  color: rgb(124, 124, 124);
+  color: #535353;
   border: 1px solid #ff073a;
   border-radius: 25px;
 }
@@ -81,10 +81,21 @@
     z-index: 1;
   }
 }
+@media only screen and (max-width: 1000px) {
+  .searchbar-input-container {
+    width: 100%;
+    border-bottom: 1px solid #535353;
+    border-radius: 0px;
+    background-color: transparent;
+  }
+  .searchbar-input {
+    border: none;
+    width: 100%;
+  }
+}
 
 @media only screen and (max-width: 800px) {
   .searchbar-input-container {
-    width: 100%;
     height: 65%;
   }
   .searchbar {
