@@ -6,10 +6,10 @@ const videoRoutes = require("./routes/api/videoRoutes");
 const commentsRoutes = require("./routes/api/commentsRoutes");
 
 // Dev only
-// const result = dotenv.config();
-// if (result.error) {
-//   throw result.error;
-// }
+const result = dotenv.config();
+if (result.error) {
+  throw result.error;
+}
 
 // initialize app config
 const app = express();
