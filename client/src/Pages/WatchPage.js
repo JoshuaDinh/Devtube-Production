@@ -8,15 +8,23 @@ import requests from "../requests";
 import axiosConfig from "../axiosConfig";
 import "./watchPage.css";
 
+import { useLocation } from "react-router-dom";
+
 const WatchPage = ({ videoId, setVideoId, loading, setLoading }) => {
   const [videoData, setVideoData] = useState({});
   const [likes, setLikes] = useState();
   const [dislikes, setDislikes] = useState();
 
-  useEffect(() => {
-    setVideoId(window.location.pathname.split("/").splice(2));
-  }, [setVideoId]);
+  const location = useLocation();
+  // Get videoId from url - passed by react router LINK
+  const id = window.location.pathname.split("/").splice(2)[0];
 
+  // Handles refresh - set's videoId
+  useEffect(() => {
+    setVideoId(id);
+  }, [location.key]);
+
+  // Fetch data by videoId
   useEffect(() => {
     setLoading(true);
     const fetchData = async () => {
@@ -32,8 +40,10 @@ const WatchPage = ({ videoId, setVideoId, loading, setLoading }) => {
       }
       setLoading(false);
     };
-    fetchData();
-  }, [videoId, setVideoId]);
+    if (videoId) {
+      fetchData();
+    }
+  }, [videoId]);
 
   return (
     <>
