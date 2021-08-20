@@ -10,7 +10,8 @@ const requests = {
   fetchVideoById: "api/videos",
   fetchRelatedVideos: "api/videos/relatedVideos",
   fetchMixedVideos: "api/videos/byTopic/mix",
-  updateVideoDetails: "api/videos",
+  updateLikes: "api/details/likes",
+  updateDislikes: "api/details/dislikes",
   fetchVideosByQuery: "api/videos/search_query=",
 };
 

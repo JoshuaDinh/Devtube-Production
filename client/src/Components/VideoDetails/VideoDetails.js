@@ -14,21 +14,42 @@ const VideoDetails = ({
   setLikes,
   setDislikes,
 }) => {
-  const [animateLike, setAnimateLike] = useState(false);
-  const [animateDislike, setAnimateDislike] = useState(false);
+  const [likeStatus, setLikeStatus] = useState(true);
+  const [dislikeStatus, setDislikeStatus] = useState(true);
 
+  // Determines if like button has been pressed - allowing only one vote per person/render
   const handleLikes = async () => {
-    const body = { increment: "likes" };
-    setAnimateLike(true);
-    await axiosConfig.put(`${requests.updateVideoDetails}/${videoId}`, body);
-    setLikes(likes + 1);
+    setLikeStatus(!likeStatus);
+    if (likeStatus === true) {
+      await axiosConfig.put(`${requests.updateLikes}/${videoId}`, {
+        status: "increment",
+      });
+      setLikes(likes + 1);
+    } else if (likeStatus == false) {
+      await axiosConfig.put(`${requests.updateLikes}/${videoId}`, {
+        status: "decrement",
+      });
+      setLikes(likes - 1);
+      setLikeStatus(!likeStatus);
+    }
   };
 
+  // Determines if dislike button has been pressed - allowing only one vote per person/render
+
   const handleDislikes = async () => {
-    const body = { increment: "dislikes" };
-    setAnimateDislike(true);
-    await axiosConfig.put(`${requests.updateVideoDetails}/${videoId}`, body);
-    setDislikes(dislikes + 1);
+    setDislikeStatus(!likeStatus);
+    if (dislikeStatus === true) {
+      await axiosConfig.put(`${requests.updateDislikes}/${videoId}`, {
+        status: "increment",
+      });
+      setDislikes(dislikes + 1);
+    } else if (dislikeStatus == false) {
+      await axiosConfig.put(`${requests.updateDislikes}/${videoId}`, {
+        status: "decrement",
+      });
+      setDislikes(dislikes - 1);
+      setDislikeStatus(!dislikeStatus);
+    }
   };
 
   return (
@@ -43,17 +64,10 @@ const VideoDetails = ({
         </span>
       </div>
       <div className="video-details-icon-container">
-        <ThumbUpIcon
-          className={`video-details-icon ${
-            animateLike && "video-details-animate-like"
-          }`}
-          onClick={handleLikes}
-        />
+        <ThumbUpIcon className="video-details-icon" onClick={handleLikes} />
         <span> {likes}</span>
         <ThumbDownIcon
-          className={`video-details-icon ${
-            animateDislike && "video-details-animate-dislike"
-          }`}
+          className="video-details-icon"
           onClick={handleDislikes}
         />
         <span>{dislikes}</span>

@@ -29,7 +29,6 @@ export const Comments = ({ videoId }) => {
 
       <h3 className="comments-header">Comments: {comments.length}</h3>
       <div className="comments-container">
-        {" "}
         {comments?.map((comment) => {
           return (
             <Comment
