@@ -15,7 +15,7 @@ export const RelatedVideos = ({ setVideoId, videoId }) => {
         );
         setRelatedVideos(response.data);
       } catch (err) {
-        console.log(err);
+        alert(err);
       }
     };
     fetchData();
