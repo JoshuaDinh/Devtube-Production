@@ -4,6 +4,7 @@ const path = require("path");
 const connectDB = require("./config/db");
 const videoRoutes = require("./routes/api/videoRoutes");
 const commentsRoutes = require("./routes/api/commentsRoutes");
+const detailsRoutes = require("./routes/api/detailsRoutes");
 
 // Dev only
 const result = dotenv.config();
@@ -20,6 +21,7 @@ app.use(express.json({ extended: false }));
 
 // routes
 app.use("/api/videos", videoRoutes);
+app.use("/api/details", detailsRoutes);
 app.use("/api/comments", commentsRoutes);
 
 // Static assets - production
