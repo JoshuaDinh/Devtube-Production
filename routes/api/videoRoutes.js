@@ -78,29 +78,4 @@ router.get("/relatedVideos/:videoId", async (req, res) => {
   }
 });
 
-// PUT update likes/dislikes by videoId
-// router.put("/likes/:videoId", async (req, res) => {
-//   const videoId = req.params.videoId;
-//   const { increment } = req.body;
-//   try {
-//     if (increment === "likes") {
-//       const incrementLikes = await videos.findOneAndUpdate(
-//         { "videoId.videoId": videoId },
-//         { $inc: { likes: 1 } },
-//         { new: true }
-//       );
-//       res.status(200).json(incrementLikes);
-//     } else if (increment === "dislikes") {
-//       const incrementDislikes = await videos.findOneAndUpdate(
-//         { "videoId.videoId": videoId },
-//         { $inc: { dislikes: 1 } },
-//         { new: true }
-//       );
-//       res.status(200).json(incrementDislikes);
-//     }
-//   } catch (err) {
-//     throw err;
-//   }
-// });
-
 module.exports = router;
