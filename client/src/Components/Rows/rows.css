@@ -1,6 +1,7 @@
 .rows {
   display: flex;
   flex-direction: column;
+  margin-top: 2%;
 }
 
 .rows-card-container {
@@ -47,12 +48,7 @@
   transform: scale(1.15);
 }
 
-/* @media only screen and (max-width: 1340px) {
-  .rows-card-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-} */
-@media only screen and (max-width: 1102px) {
+@media only screen and (max-width: 1100px) {
   .rows-card-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -60,8 +56,18 @@
     width: 20%;
   }
 }
+
+@media only screen and (max-width: 850px) {
+  .rows {
+    margin-top: 5%;
+  }
+}
+
 @media only screen and (max-width: 530px) {
   .rows-card-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .rows-title {
+    font-size: 1.4rem;
   }
 }
