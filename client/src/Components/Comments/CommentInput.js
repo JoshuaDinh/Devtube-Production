@@ -3,9 +3,20 @@ import FormAlert from "../FormAlert/FormAlert";
 import axiosConfig from "../../axiosConfig";
 import requests from "../../requests";
 import "./comments.css";
+import { useLocation } from "react-router-dom";
 
 const CommentInput = ({ videoId, setFormStatus, formStatus }) => {
   const [displayAlert, setDisplayAlert] = useState(false);
+
+  useEffect(() => {
+    setFormData({
+      ...formData,
+      name: "",
+      avatar: "",
+      comment: "",
+      commentId: videoId,
+    });
+  }, [videoId]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -19,7 +30,7 @@ const CommentInput = ({ videoId, setFormStatus, formStatus }) => {
       setDisplayAlert(false);
     }, 1500);
     return () => clearTimeout(timer);
-  }, [formStatus]);
+  }, [formStatus, videoId]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,6 +49,13 @@ const CommentInput = ({ videoId, setFormStatus, formStatus }) => {
 
   const clearData = (e) => {
     e.preventDefault();
+    setFormData({
+      ...formData,
+      name: "",
+      avatar: "",
+      comment: "",
+      commentId: videoId,
+    });
   };
 
   return (
