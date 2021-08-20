@@ -3,7 +3,6 @@ import FormAlert from "../FormAlert/FormAlert";
 import axiosConfig from "../../axiosConfig";
 import requests from "../../requests";
 import "./comments.css";
-import { useLocation } from "react-router-dom";
 
 const CommentInput = ({ videoId, setFormStatus, formStatus }) => {
   const [displayAlert, setDisplayAlert] = useState(false);

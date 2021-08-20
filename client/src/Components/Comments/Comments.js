@@ -16,7 +16,9 @@ export const Comments = ({ videoId }) => {
       );
       setComments(response.data);
     };
-    fetchData();
+    if (videoId) {
+      fetchData();
+    }
   }, [formStatus, videoId]);
 
   return (
@@ -26,7 +28,6 @@ export const Comments = ({ videoId }) => {
         setFormStatus={setFormStatus}
         formStatus={formStatus}
       />
-
       <h3 className="comments-header">Comments: {comments.length}</h3>
       <div className="comments-container">
         {comments?.map((comment) => {
