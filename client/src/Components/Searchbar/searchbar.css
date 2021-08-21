@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-.searchbar-input-container {
+.input-container {
   width: 71%;
   padding: 2px;
   display: flex;
@@ -29,7 +29,7 @@
   background: whitesmoke;
 }
 
-.searchbar-input {
+.input {
   width: 95%;
   padding: 1.5%;
   outline: none;
@@ -37,19 +37,19 @@
   background-color: transparent;
 }
 
-.searchbar-search-icon {
+.search-icon {
   font-size: 1.7rem !important;
   cursor: pointer;
   text-decoration: none;
   color: #535353;
 }
 
-.searchbar-avatar-icon {
+.avatar-icon {
   cursor: pointer;
   margin-right: 2%;
 }
 
-.searchbar-login {
+.login {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,44 +61,41 @@
   border-radius: 25px;
 }
 
-.searchbar-mobile-nav-icon {
+.mobile-nav-icon {
   margin-right: 20px;
   font-size: 2rem !important;
   color: grey;
   cursor: pointer;
   z-index: -1;
 }
-.searchbar-mobile-nav-close {
+.mobile-nav-close {
   transform: rotate(180deg);
 }
 
-.searchbar-mobile-nav-icon:hover {
+.mobile-nav-icon:hover {
   color: red;
 }
 
 @media only screen and (max-width: 1340px) {
-  .searchbar-mobile-nav-icon {
+  .mobile-nav-icon {
     z-index: 1;
   }
 }
 @media only screen and (max-width: 1000px) {
-  .searchbar-input-container {
+  .input-container {
     width: 100%;
     border-bottom: 1px solid #535353;
-    border-radius: 0px;
     background-color: transparent;
   }
-  .searchbar-input {
+  .input {
     border: none;
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .searchbar-input-container {
-    height: 65%;
-  }
   .searchbar {
     height: 5vh;
+    border: none;
   }
 }
