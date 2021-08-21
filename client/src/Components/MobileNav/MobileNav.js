@@ -7,7 +7,7 @@ const MobileNav = ({ toggleMobileNav }) => {
   return (
     <div className="mobile-nav">
       <Welcome />
-      <div className="mobile-nav-section-container">
+      <div className="m-nav-container">
         <NavLink
           exact={true}
           activeClassName="is-active"

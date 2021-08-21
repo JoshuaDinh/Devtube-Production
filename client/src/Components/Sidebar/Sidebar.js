@@ -13,14 +13,14 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <Welcome />
-      <div className="sidebar-section-container">
+      <div className="sidebar-container">
         <NavLink
           exact={true}
           activeClassName="is-active"
           to="/"
           className="NavLink"
         >
-          <HomeIcon className="sidebar-icon" /> <span>Home</span>
+          <HomeIcon className="icon" /> <span>Home</span>
         </NavLink>
         <p>Catagories</p>
         <NavLink
@@ -29,7 +29,7 @@ const Sidebar = () => {
           className="NavLink"
           activeClassName="is-active"
         >
-          <HttpIcon className="sidebar-icon" /> <span>Html/Css</span>
+          <HttpIcon className="icon" /> <span>Html/Css</span>
         </NavLink>
         <NavLink
           exact={true}
@@ -37,7 +37,7 @@ const Sidebar = () => {
           className="NavLink"
           activeClassName="is-active"
         >
-          <WebIcon className="sidebar-icon" />
+          <WebIcon className="icon" />
           <span>Javascript</span>
         </NavLink>
         <NavLink
@@ -46,7 +46,7 @@ const Sidebar = () => {
           className="NavLink"
           activeClassName="is-active"
         >
-          <VerticalSplitIcon className="sidebar-icon" /> <span>React.js</span>
+          <VerticalSplitIcon className="icon" /> <span>React.js</span>
         </NavLink>
         <NavLink
           exact={true}
@@ -54,7 +54,7 @@ const Sidebar = () => {
           className="NavLink"
           activeClassName="is-active"
         >
-          <LanguageIcon className="sidebar-icon" /> <span>Node.js</span>
+          <LanguageIcon className="icon" /> <span>Node.js</span>
         </NavLink>
         <NavLink
           exact={true}
@@ -62,7 +62,7 @@ const Sidebar = () => {
           className="NavLink"
           activeClassName="is-active"
         >
-          <StorageIcon className="sidebar-icon" /> <span>MongoDB</span>
+          <StorageIcon className="icon" /> <span>MongoDB</span>
         </NavLink>
       </div>
     </div>

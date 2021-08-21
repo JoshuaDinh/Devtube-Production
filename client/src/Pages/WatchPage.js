@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { VideoPlayer } from "../Components/VideoPlayer/VideoPlayer";
-import { RelatedVideos } from "../Components/RelatedVideos/RelatedVideos";
+import RelatedVideosContainer from "../Components/RelatedVideosContainer/RelatedVideosContainer";
 import VideoDetails from "../Components/VideoDetails/VideoDetails";
 import { Comments } from "../Components/Comments/Comments";
 import Loading from "../Components/Loading/Loading";
@@ -22,7 +22,7 @@ const WatchPage = ({ videoId, setVideoId, loading, setLoading }) => {
   // Handles refresh - set's videoId
   useEffect(() => {
     setVideoId(id);
-  }, [location.key]);
+  }, [location.key, id, setVideoId]);
 
   // Fetch data by videoId
   useEffect(() => {
@@ -43,14 +43,14 @@ const WatchPage = ({ videoId, setVideoId, loading, setLoading }) => {
     if (videoId) {
       fetchData();
     }
-  }, [videoId]);
+  }, [videoId, id]);
 
   return (
     <>
       <div className="watch-page-video-container">
         {loading && <Loading />}
         <VideoPlayer videoId={videoId} />
-        <RelatedVideos setVideoId={setVideoId} videoId={videoId} />
+        <RelatedVideosContainer setVideoId={setVideoId} videoId={videoId} />
       </div>
       <VideoDetails
         videoData={videoData}

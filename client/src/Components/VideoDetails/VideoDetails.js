@@ -31,7 +31,7 @@ const VideoDetails = ({
         status: "increment",
       });
       setLikes(likes + 1);
-    } else if (likeStatus == false) {
+    } else if (likeStatus === false) {
       await axiosConfig.put(`${requests.updateLikes}/${videoId}`, {
         status: "decrement",
       });
@@ -48,7 +48,7 @@ const VideoDetails = ({
         status: "increment",
       });
       setDislikes(dislikes + 1);
-    } else if (dislikeStatus == false) {
+    } else if (dislikeStatus === false) {
       await axiosConfig.put(`${requests.updateDislikes}/${videoId}`, {
         status: "decrement",
       });

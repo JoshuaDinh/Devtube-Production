@@ -8,10 +8,10 @@ const VideoCard = ({ title, thumbnail, setVideoId, videoId, homepage }) => {
       to={`/watch/${videoId}`}
       onClick={() => setVideoId(videoId)}
     >
-      <img src={thumbnail} alt="#" className="video-thumbnail" />
+      <img src={thumbnail} alt="#" className="vc-thumbnail" />
       {!homepage ? (
-        <div className="card-info">
-          <p className="video-card-title ">{title}</p>
+        <div className="vc-info">
+          <p className="vc-title ">{title}</p>
         </div>
       ) : (
         ""

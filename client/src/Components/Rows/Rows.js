@@ -17,9 +17,9 @@ const Rows = ({ videos, setVideoId, title, link, homepage }) => {
 
   return (
     <div className="rows">
-      <h5 className="rows-title">{title}</h5>
+      <h5 className="title">{title}</h5>
       {viewAllBtn()}
-      <div className="rows-card-container">
+      <div className="rows-container">
         {videos?.map((data) => {
           return (
             data.snippet?.thumbnails && (

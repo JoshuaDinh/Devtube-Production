@@ -26,14 +26,14 @@ const Searchbar = () => {
     if (query) {
       history.push("/search_results=" + query);
     }
-  }, [query]);
+  }, [query, history]);
 
   return (
     <header className="searchbar">
       <form className="searchbar-form" onSubmit={(e) => handleSubmit(e, input)}>
-        <div className="searchbar-input-container">
+        <div className="input-container">
           <input
-            className="searchbar-input"
+            className="input"
             placeholder="Search.."
             type="text"
             onChange={(e) => setInput(e.target.value)}
@@ -41,15 +41,13 @@ const Searchbar = () => {
             value={input}
           ></input>
           <SearchIcon
-            className="searchbar-search-icon"
+            className="search-icon"
             onClick={(e) => handleSubmit(e, input)}
           />
         </div>
       </form>
       <ExpandMoreIcon
-        className={`searchbar-mobile-nav-icon ${
-          mobileNav && "searchbar-mobile-nav-close"
-        }`}
+        className={`mobile-nav-icon ${mobileNav && "mobile-nav-close"}`}
         onClick={toggleMobileNav}
       />
       {mobileNav && <MobileNav toggleMobileNav={toggleMobileNav} />}

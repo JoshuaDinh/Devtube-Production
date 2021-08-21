@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./comments.css";
 import axiosConfig from "../../axiosConfig";
 import requests from "../../requests";
-import CommentInput from "./CommentInput";
-import Comment from "./Comment";
+import CommentForm from "../CommentForm/CommentForm";
+import Comment from "../Comment/Comment";
 
 export const Comments = ({ videoId }) => {
   const [comments, setComments] = useState([]);
@@ -23,7 +23,7 @@ export const Comments = ({ videoId }) => {
 
   return (
     <div className="comments">
-      <CommentInput
+      <CommentForm
         videoId={videoId}
         setFormStatus={setFormStatus}
         formStatus={formStatus}

@@ -13,14 +13,14 @@ router.get("/byTopic/:subject", async (req, res) => {
   }
 });
 
-// Get 5 random videos by topic/subject (displayed on homepage)
+// Get 8 random videos by topic/subject (displayed on homepage)
 router.get("/byTopic/mix/:subject", async (req, res) => {
   let subject = req.params.subject;
   try {
     const videosByTopic = await videos.findOne({ topic: subject });
     const randomVideos = await videos.aggregate([
       { $match: { topic: videosByTopic.topic } }, // Filter the results by Subject
-      { $sample: { size: 4 } }, // Retrieves 5 documents
+      { $sample: { size: 8 } }, // Retrieves 5 documents
     ]);
     res.status(200).json(randomVideos);
   } catch (err) {
