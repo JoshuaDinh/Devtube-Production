@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   border-radius: 10px;
- 
   overflow: hidden;
   background: whitesmoke;
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
@@ -18,17 +17,16 @@
   opacity: 1;
 }
 
-.video-card-title {
+.vc-title {
   padding: 8px;
   font-size: 0.9rem;
   color: black;
 }
 
-.video-thumbnail {
+.vc-thumbnail {
   min-width: 300px;
   min-height: 100px;
   max-height: 250px;
   width: 100%;
   object-fit: fill;
 }
-
