@@ -1,0 +1,48 @@
+.comment {
+  background: whitesmoke;
+  color: white;
+  flex: 1;
+  border-radius: 5px;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2%;
+  border-bottom: 1px solid darkgrey;
+}
+
+.comment-name {
+  color: black;
+  margin-left: 15px;
+}
+.comment-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 3em;
+  background: #870000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #190a05,
+    #870000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #190a05,
+    #870000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 1px solid white;
+  border-radius: 50%;
+  color: whitesmoke;
+}
+
+.comment-text {
+  padding: 2%;
+  overflow: hidden;
+  color: black;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
